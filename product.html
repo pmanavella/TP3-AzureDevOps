@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Producto - Bazar y Textiles</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+  <link rel="stylesheet" href="estilo.css" />
+  <style>
+    /* Estilos para el mensaje toast */
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #4a4a4a; /* gris oscuro */
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+      z-index: 1000;
+      font-family: 'Raleway', sans-serif;
+      font-weight: normal; /* sin negrita */
+      user-select: none;
+    }
+    .toast.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  </style>
+  
+</head>
+<body class="bg-white">
+
+  <nav class="bg-amber-800 text-white py-4 px-6 flex justify-between items-center">
+    <a href="index.html" class="font-bold text-xl">Bazar & Textiles</a>
+    <a href="sales.html" class="hover:text-amber-200">🛒 Carrito</a>
+  </nav>
+
+  <main class="max-w-5xl mx-auto py-16 px-4">
+    <div class="space-y-12">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="w-72 h-72">
+          <img
+            src="https://i.pinimg.com/736x/cf/e8/44/cfe844ce9189fc306085249fa8854663.jpg"
+            alt="Producto"
+            class="w-full h-full object-cover rounded-lg shadow"
+          />
+        </div>
+        <div>
+          <h1 class="text-3xl font-bold mb-4 text-gray-800">Mantel artesanal de tusor</h1>
+          <p class="text-gray-600 mb-4">
+            Diseño exclusivo tejido a mano. Tamaño 150x150 cm. Ideal para comidas familiares o eventos especiales.
+          </p>
+          <p class="text-2xl text-amber-700 font-bold mb-6">$12.990</p>
+          <button class="bg-marron hover:bg-marron-transparente text-white font-bold py-3 px-6 rounded transition">Añadir al carrito</button>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="w-72 h-72">
+          <img
+            src="https://i.pinimg.com/736x/03/57/17/035717d29ad2aa0d129d8764ac2f1717.jpg"
+            alt="Producto"
+            class="w-full h-full object-cover rounded-lg shadow"
+          />
+        </div>
+        <div>
+          <h1 class="text-3xl font-bold mb-4 text-gray-800">Mantel Artesanal</h1>
+          <p class="text-gray-600 mb-4">
+            Diseño exclusivo tejido a mano. Tamaño 150x150 cm. Ideal para comidas familiares o eventos especiales.
+          </p>
+          <p class="text-2xl text-amber-700 font-bold mb-6">$12.990</p>
+          <button class="bg-marron hover:bg-marron-transparente text-white font-bold py-3 px-6 rounded transition">Añadir al carrito</button>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="w-72 h-72">
+          <img
+            src="https://i.pinimg.com/736x/f8/53/25/f8532574abf9f2b7c1cc0795c5f6909c.jpg"
+            alt="Producto"
+            class="w-full h-full object-cover rounded-lg shadow"
+          />
+        </div>
+        <div>
+          <h1 class="text-3xl font-bold mb-4 text-gray-800">Mantel voladillos verde</h1>
+          <p class="text-gray-600 mb-4">
+            Diseño exclusivo tejido a mano. Tamaño 150x150 cm. Ideal para comidas familiares o eventos especiales.
+          </p>
+          <p class="text-2xl text-amber-700 font-bold mb-6">$12.990</p>
+          <button class="bg-marron hover:bg-marron-transparente text-white font-bold py-3 px-6 rounded transition">Añadir al carrito</button>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="w-72 h-72">
+          <img
+            src="https://i.pinimg.com/736x/13/a0/e8/13a0e8bec824f19130e57b6a732413cd.jpg"
+            alt="Producto"
+            class="w-full h-full object-cover rounded-lg shadow"
+          />
+        </div>
+        <div>
+          <h1 class="text-3xl font-bold mb-4 text-gray-800">Mantel voladillos gris</h1>
+          <p class="text-gray-600 mb-4">
+            Diseño exclusivo tejido a mano. Tamaño 150x150 cm. Ideal para comidas familiares o eventos especiales.
+          </p>
+          <p class="text-2xl text-amber-700 font-bold mb-6">$12.990</p>
+          <button class="bg-marron hover:bg-marron-transparente text-white font-bold py-3 px-6 rounded transition">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Toast message -->
+  <div id="toast" class="toast">Añadido exitosamente</div>
+
+  <footer class="bg-marron-claro-oscuro text-white py-8 text-center">
+    <p>© 2025 Bazar y Textiles. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const toast = document.getElementById('toast');
+
+    function showToast() {
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+
+    document.querySelectorAll('button.bg-marron').forEach(button => {
+      button.addEventListener('click', () => {
+        showToast();
+      });
+    });
+  </script>
+</body>
+</html>

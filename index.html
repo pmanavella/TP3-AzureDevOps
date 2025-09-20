@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bazar y Textiles - Inicio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link rel="stylesheet" href="estilo.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+  <!-- NAV -->
+  <nav id="navbar" class="bg-amber-800 bg-opacity-80 backdrop-blur text-white shadow-lg fixed top-0 w-full z-50 transition duration-300">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="text-2xl font-bold">Bazar & Textiles</div>
+      <div class="hidden md:flex space-x-8">
+        <a href="#inicio" class="nav-link hover:text-amber-200 transition">Inicio</a>
+        <a href="#productos" class="nav-link hover:text-amber-200 transition">Productos</a>
+        <a href="#destacados" class="nav-link hover:text-amber-200 transition">Destacados</a>
+        <a href="#contacto" class="nav-link hover:text-amber-200 transition">Contacto</a>
+      </div>
+      <a href="sales.html" class="text-white hover:text-amber-300">🛒</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="inicio" class="hero-image h-screen flex items-center justify-center text-center text-white">
+    <div class="px-4">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">Bazar y Textiles de Calidad</h1>
+      <p class="text-xl md:text-2xl mb-8">Productos artesanales para tu hogar</p>
+      <a href="#productos" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-full transition">Ver Productos</a>
+    </div>
+  </section>
+
+  <!-- CATEGORIAS Y DESTACADOS -->
+  <section id="productos" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Nuestras Categorías</h2>
+      <!-- Aquí puedes incluir los cards resumidos -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <a href="product.html" class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+          <img src="https://i.pinimg.com/736x/cf/e8/44/cfe844ce9189fc306085249fa8854663.jpg" class="h-48 w-full object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-bold text-gray-800">Manteles</h3>
+            <p class="text-gray-600 text-sm">Diseños únicos para todas tus ocasiones especiales.</p>
+          </div>
+        </a>
+        <a href="product.html" class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+            <img src="https://i.pinimg.com/736x/a4/22/6e/a4226eb2fc15c2d4a4523e628272c408.jpg" class="h-48 w-full object-cover">
+            <div class="p-5">
+                <h3 class="text-xl font-bold text-gray-800">Copas</h3>
+                <p class="text-gray-600 text-sm">Diseños únicos para todas tus ocasiones especiales.</p>
+              </div>
+        </a>
+        <a href="product.html" class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+            <img src="https://i.pinimg.com/1200x/96/a5/74/96a5743fd2faf2fa39da952247ca3b9a.jpg" class="h-48 w-full object-cover">
+            <div class="p-5">
+                <h3 class="text-xl font-bold text-gray-800">Vajilla</h3>
+                <p class="text-gray-600 text-sm">Diseños únicos para todas tus ocasiones especiales.</p>
+              </div>
+        </a>
+        <a href="product.html" class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+            <img src="https://i.pinimg.com/736x/81/77/db/8177db21fc03adbc61f2a132c4f6fd83.jpg" class="h-48 w-full object-cover">
+            <div class="p-5">
+                <h3 class="text-xl font-bold text-gray-800">Salidas de baño</h3>
+                <p class="text-gray-600 text-sm">Diseños únicos para todas tus ocasiones especiales.</p>
+              </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="py-16 bg-gray-100 text-white">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-marron">Contáctanos</h2>
+        <form class="max-w-xl mx-auto space-y-4">
+        <input type="text" placeholder="Tu nombre" class="w-full px-4 py-2 rounded bg-white bg-opacity-30 border border-amber-700 text-black">
+        <input type="email" placeholder="Tu email" class="w-full px-4 py-2 rounded bg-white bg-opacity-30 border border-amber-700 text-black">
+        <textarea rows="4" placeholder="Tu mensaje" class="w-full px-4 py-2 rounded bg-white bg-opacity-30 border border-amber-700 text-black"></textarea>
+        <button type="submit" class="bg-amber-600 hover:bg-amber-700 text-marron font-bold py-2 px-6 rounded transition">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+<!-- MEDIOS DE PAGO -->
+<section class="bg-marron-claro py-4">
+    <div class="container mx-auto px-4">
+      <h3 class="text-xl text-white mb-6">Medios de pago</h3>
+      <div class="flex flex-wrap gap-4 items-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" class="h-8 bg-white p-1 rounded shadow">
+        <img src="https://w1.pngwing.com/pngs/191/339/png-transparent-visa-mastercard-logo-credit-card-yellow-text-line-area-circle.png" class="h-8 bg-white p-1 rounded shadow">
+        <img src="https://woocommerce.com/wp-content/uploads/2021/05/fb-mercado-pago-v2@2x.png" class="h-8 bg-white p-1 rounded shadow">
+      </div>
+    </div>
+  </section>
+  
+  <!-- FOOTER -->
+  <footer class="bg-marron-claro-oscuro text-white py-8 text-center">
+    <p>© 2025 Bazar y Textiles. Todos los derechos reservados.</p>
+  </footer>
+  
+
+  <script>
+    // window.addEventListener('scroll', function () {
+    //   const navbar = document.getElementById('navbar');
+    //   if (window.scrollY > 100) {
+    //     navbar.classList.remove('bg-amber-800', 'bg-opacity-80', 'text-white');
+    //     navbar.classList.add('bg-black', 'bg-opacity-90', 'text-white');
+    //   } else {
+    //     navbar.classList.remove('bg-black', 'bg-opacity-90');
+    //     navbar.classList.add('bg-amber-800', 'bg-opacity-80', 'text-white');
+    //   }
+    // });
+    window.addEventListener('scroll', function () {
+  const navbar = document.getElementById('navbar');
+  if (window.scrollY > 100) {
+    navbar.classList.remove('bg-amber-800', 'bg-opacity-80', 'text-white');
+    navbar.classList.add('bg-marron-transparente', 'text-white');
+  } else {
+    navbar.classList.remove('bg-marron-transparente');
+    navbar.classList.add('bg-amber-800', 'bg-opacity-80', 'text-white');
+  }
+});
+
+
+
+  </script></main>  
+</body>
+</html>
